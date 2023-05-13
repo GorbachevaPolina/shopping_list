@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.sass';
+import App from './components/app/app';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { compose, createStore, applyMiddleware  } from 'redux';
 import { rootReducer } from './services/reducers/rootReducer';
+import { ReactNotifications } from 'react-notifications-component'
 
 const composeEnhancers =
 typeof window === 'object' &&
@@ -22,6 +23,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <ReactNotifications />
       <App />
     </Provider>
   </React.StrictMode>
