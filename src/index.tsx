@@ -22,7 +22,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ReactNotifications />
       <App />
     </Provider>
   </React.StrictMode>
