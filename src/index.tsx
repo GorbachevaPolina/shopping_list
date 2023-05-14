@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { compose, createStore, applyMiddleware  } from 'redux';
 import { rootReducer } from './services/reducers/rootReducer';
-import { ReactNotifications } from 'react-notifications-component'
 
 const composeEnhancers =
 typeof window === 'object' &&
