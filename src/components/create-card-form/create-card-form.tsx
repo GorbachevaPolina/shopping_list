@@ -4,6 +4,8 @@ import { useDispatch } from "../../services/types/store";
 import { createCard } from "../../services/actions/cards";
 import { v4 as uuidv4 } from "uuid"
 import './create-card-form.sass'
+import InputSingle from "../input-single/input-single";
+import InputMulti from "../input-multi/input-multi";
 
 type TCreateCardFromProps = {
     onCreate: React.Dispatch<React.SetStateAction<boolean>>
@@ -39,17 +41,17 @@ const CreateCardForm: FC<TCreateCardFromProps> = ({onCreate}) => {
 
     return(
         <form onSubmit={(e) => handleSubmit(e)}>
-            <input 
+            <InputSingle 
                 placeholder="Имя товара"
                 value={inputs.name}
                 onChange={(e) => setInputs({...inputs, name: e.target.value})}
             />
-            <input
+            <InputSingle
                 placeholder="Цена товара"
                 value={inputs.price}
                 onChange={(e) => setInputs({...inputs, price: e.target.value})}
             />
-            <textarea 
+            <InputMulti 
                 placeholder="Описание товара"
                 value={inputs.description}
                 onChange={(e) => setInputs({...inputs, description: e.target.value})}
@@ -58,7 +60,6 @@ const CreateCardForm: FC<TCreateCardFromProps> = ({onCreate}) => {
                 type="file"
                 onChange={(e) => handleFile(e)}
             />
-
             <Button type="submit">Добавить товар в список</Button>
         </form>
     )

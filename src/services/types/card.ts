@@ -6,3 +6,9 @@ export type TCard = {
     image: string,
     isBought: boolean
 }
+
+export type TInputProps = {
+    placeholder: string,
+    value: string,
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+}
