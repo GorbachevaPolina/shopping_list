@@ -26,7 +26,7 @@ const Notification: FC = () => {
                 type: SET_NOTIFICATION
             })
         }
-    }, [isNotification, message])
+    }, [isNotification, message, title, type, dispatch])
 
     return ReactDOM.createPortal(
             output,

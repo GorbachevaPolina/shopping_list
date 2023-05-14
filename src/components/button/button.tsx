@@ -2,7 +2,6 @@ import React, {FC} from 'react'
 import './button.sass'
 
 type TButtonProps = {
-    // value: string
     type: "button" | "submit" | "reset",
     children: React.ReactNode,
     onClick?: () => void

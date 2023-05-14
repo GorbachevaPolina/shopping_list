@@ -8,8 +8,6 @@ export type RootState = ReturnType<typeof store.getState>
 export type TApplicationActions = 
     TCardsActions;
 
-// export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, TApplicationActions>
-// export type AppDispatch = typeof store.dispatch
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, TApplicationActions>
 export type AppDispatch = <TReturnType>(action: TApplicationActions | AppThunk) => TReturnType
 
